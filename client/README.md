@@ -128,6 +128,8 @@ Utility functions and services:
 
 ## 🚦 Getting Started
 
+- Create a `.env` file in the root directory with variables names same as `.env.sample`
+
 1. **Install Dependencies**
 
    ```bash

@@ -10,7 +10,7 @@ export default function OrderDetailsV() {
   const { orderId } = useParams();
   const [data, setData] = useState<IOrderDetails | null>(null);
   const [loading, setLoading] = useState(true);
-  console.log('loading', loading);
+
   const fetchOrderDetails = async () => {
     try {
       setLoading(true);
@@ -25,7 +25,7 @@ export default function OrderDetailsV() {
 
   useEffect(() => {
     fetchOrderDetails();
-  }, [orderId]);
+  }, []);
 
   if (loading) return <div>Loading...</div>;
 
@@ -33,7 +33,6 @@ export default function OrderDetailsV() {
 
   const { order, orderItems, products } = data;
 
-  console.log('orderId', orderId);
   return (
     <div className="p-6">
       <h1 className="text-2xl font-bold mb-4">Order #{order.id}</h1>

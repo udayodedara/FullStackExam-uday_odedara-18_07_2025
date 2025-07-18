@@ -50,13 +50,7 @@ server/
    ```bash
    npm install
    ```
-3. Create a `.env` file in the root directory with the following variables:
-   ```env
-   PORT=3000
-   MONGODB_URI=your_mongodb_uri
-   POSTGRES_CONNECTION_STRING=your_postgres_connection_string
-   JWT_SECRET=your_jwt_secret
-   ```
+3. Create a `.env` file in the root directory with variables names same as `.env.sample`
 4. Run the development server:
    ```bash
    npm run dev
