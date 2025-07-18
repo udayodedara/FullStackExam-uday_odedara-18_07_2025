@@ -4,16 +4,17 @@ import Link from 'next/link';
 import { Suspense } from 'react';
 
 interface ProductsPageProps {
-  searchParams: {
+  searchParams: Promise<{
     page?: string;
-  };
+  }>;
 }
 
 const ITEMS_PER_PAGE = 8;
 
 export default async function ProductsPage({ searchParams }: ProductsPageProps) {
+  const { page } = await searchParams;
   const baseUrl = process.env.NEXT_PUBLIC_API_URL;
-  const currentPage = Number(searchParams.page) || 1;
+  const currentPage = Number(page) || 1;
 
   const res: ProductResponse = await fetch(`${baseUrl}/product/list?page=${currentPage}&limit=${ITEMS_PER_PAGE}`).then(
     (res) => res.json(),

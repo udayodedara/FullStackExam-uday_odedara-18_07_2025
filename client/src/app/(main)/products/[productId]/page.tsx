@@ -2,8 +2,14 @@ import AddToCartButton from '@/components/AddToCartButton';
 import { Product } from '@/types/product';
 import Image from 'next/image';
 
-export default async function ProductPage({ params }: { params: { productId: string } }) {
-  const { productId } = params;
+interface ProductPageProps {
+  params: Promise<{
+    productId: string;
+  }>;
+}
+
+export default async function ProductPage({ params }: ProductPageProps) {
+  const { productId } = await params;
   const baseUrl = process.env.NEXT_PUBLIC_API_URL;
   console.log('productId', productId);
   const product = await fetch(`${baseUrl}/product/${productId}`, {

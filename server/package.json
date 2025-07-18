@@ -2,9 +2,9 @@
   "name": "express-ts-server",
   "version": "1.0.0",
   "description": "Express TypeScript server with MongoDB and PostgreSQL",
-  "main": "dist/index.js",
+  "main": "src/index.js",
   "scripts": {
-    "start": "node dist/index.js",
+    "start": "node src/index.js",
     "dev": "nodemon src/index.ts",
     "build": "tsc",
     "lint": "eslint . --ext .ts",
