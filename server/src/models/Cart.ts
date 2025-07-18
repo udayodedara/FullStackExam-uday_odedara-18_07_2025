@@ -13,7 +13,6 @@ const cartSchema = new Schema(
   {
     userId: {
       type: Number,
-      unique: true,
       required: true,
     },
     products: [
@@ -28,6 +27,8 @@ const cartSchema = new Schema(
     timestamps: true,
   }
 );
+
+cartSchema.index({ userId: 1 }, { unique: true });
 
 const Cart = mongoose.model<ICart>('Cart', cartSchema);
 
