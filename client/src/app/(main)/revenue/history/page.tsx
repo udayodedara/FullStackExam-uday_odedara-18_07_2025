@@ -1,14 +1,19 @@
 import { RevenueResponse } from '@/types/revenue';
 
+export const metadata = {
+  title: 'Revenue History',
+  description: 'Revenue History',
+};
+
 export default async function RevenueHistoryPage() {
   const baseUrl = process.env.NEXT_PUBLIC_API_URL;
-  const res: RevenueResponse[] = await fetch(`${baseUrl}/revenue/last-7-days-revenue`).then((res) => res.json());
-  console.log(res);
+  const res = await fetch(`${baseUrl}/revenue/last-7-days-revenue`);
+  const data: RevenueResponse[] = await res.json();
   return (
     <div>
       <h2 className="text-2xl font-bold mb-4">Last 7 Days Revenue</h2>
       <div className="grid grid-cols-1 gap-6">
-        {res.map((item, index) => (
+        {data.map((item, index) => (
           <div key={item.order_date} className="bg-white p-4 rounded-lg shadow-md">
             <div className="flex items-center">
               <span>{index + 1}</span>

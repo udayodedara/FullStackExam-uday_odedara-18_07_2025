@@ -1,5 +1,10 @@
 import { TopSpenderResponse } from '@/types/revenue';
 
+export const metadata = {
+  title: 'Top Spenders',
+  description: 'Top Spenders',
+};
+
 export default async function TopSpendersPage() {
   const baseUrl = process.env.NEXT_PUBLIC_API_URL;
   const res = await fetch(`${baseUrl}/revenue/top-spenders-list`);

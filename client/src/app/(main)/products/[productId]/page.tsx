@@ -2,6 +2,11 @@ import AddToCartButton from '@/components/AddToCartButton';
 import { Product } from '@/types/product';
 import Image from 'next/image';
 
+export const metadata = {
+  title: 'Product Details',
+  description: 'Product Details',
+};
+
 interface ProductPageProps {
   params: Promise<{
     productId: string;

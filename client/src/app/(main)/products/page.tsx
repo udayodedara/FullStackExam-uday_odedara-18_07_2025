@@ -3,6 +3,11 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Suspense } from 'react';
 
+export const metadata = {
+  title: 'Products',
+  description: 'Products',
+};
+
 interface ProductsPageProps {
   searchParams: Promise<{
     page?: string;
