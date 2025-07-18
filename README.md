@@ -4,8 +4,8 @@ This is a complete e-commerce application built with modern web technologies, fe
 
 ## Live URLs
 
-- Frontend Application: [https://fullstack-exam-frontend.vercel.app](https://fullstack-exam-frontend.vercel.app)
-- Backend API: [https://fullstack-exam-backend.onrender.com](https://fullstack-exam-backend.onrender.com)
+- Frontend Application: [https://full-stack-exam-uday-odedara-18-07.vercel.app](https://full-stack-exam-uday-odedara-18-07.vercel.app)
+- Backend API: [https://fullstackexam-uday-odedara-18-07-2025.onrender.com](https://fullstackexam-uday-odedara-18-07-2025.onrender.com)
 
 ## Features
 
